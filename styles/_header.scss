@@ -1,0 +1,93 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    .header__wrapper{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+        .header__title{
+            h2{
+                color: var(--textSecondaryColor);
+                font-weight: 800;
+                cursor: pointer;
+            }
+        }
+        i{
+            font-size: var(--fontMedium);
+            color: #000;
+            cursor: pointer;
+            display: none;
+            @media screen and (max-width: 853px){
+                display: block;
+                margin-right: 10px;
+            }
+        }
+        .nav__menu{
+            display: flex;
+            li{
+                &:not(:last-child){
+                 margin-right: 20px;
+                }
+                a{
+                    text-decoration: none;
+                    color: initial;
+                    &:hover{
+                        color: var(--primaryColor);
+                    }
+                }
+                @media screen and (max-width: 853px){
+                    margin-bottom: 20px;
+                }
+                
+            }
+            @media screen and (max-width: 853px){
+                position: absolute;
+                left: 0;
+                top: 2rem;
+                padding-top: 3rem;
+                flex-direction: column;
+                width: 100%;
+                z-index: 5;
+                height: 40vh;
+                background-color: #fff;
+                border-bottom: 2px solid #ddd;
+                display: none;
+                
+
+            }
+        }
+    }
+    .header__social{
+        display: flex;
+        align-items: center;
+        i{
+            font-size: var(--fontMedium);
+            color: var(--textSecondaryColor);
+            cursor: pointer;
+        }
+    }
+    
+}
+.blur{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        @media screen and (max-width: 853px){
+            display: block;
+        }
+        
+    }

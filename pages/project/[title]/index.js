@@ -1,0 +1,111 @@
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { data } from "../../api/data";
+import Head from "next/head";
+import Image from "next/image";
+import Meta from "../../../components/Meta/Meta";
+
+function ProjectInfo() {
+    const router = useRouter();
+    const { title } = router.query;
+    console.log(title);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    console.log(title);
+    return (
+        <section className="project">
+            {/* <div>
+                <h2 className="section__title">Some Projects I've Built</h2>
+            </div> */}
+            <div className="project__wrapper">
+                {data
+                    .filter(info => info.title.toLowerCase() === title)
+                    .map((project, index) => {
+                        const {
+                            img,
+                            mobile_view,
+                            desktop_view,
+                            alt,
+                            description,
+                            title,
+                            tech_use,
+                            site_link,
+                            github_repo,
+                        } = project;
+                        return (
+                            <>
+                                <Meta
+                                    title={`${title} - Projects`}
+                                    image={img}
+                                    description={description}
+                                />
+                                <h2>{title}</h2>
+                                <div className="project__container" key={index}>
+                                    <div className="project__image">
+                                        <Image
+                                            src={img}
+                                            alt={alt}
+                                            placeholder="blur"
+                                            blurDataURL={`/_next/image?url=${img}&w=16&q=1`}
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <div className="project__description">
+                                        <div className="project__btn">
+                                            <a
+                                                className="btn_sitelink"
+                                                href={site_link}
+                                            >
+                                                View live site
+                                            </a>
+                                            <a
+                                                className="btn_githubrepo"
+                                                href={github_repo}
+                                            >
+                                                Github Repository
+                                            </a>
+                                        </div>
+                                        <p>{description}</p>
+                                        <p>Tech used:</p>
+                                        <ul className="project__techuse">
+                                            {tech_use.map((tech, i) => {
+                                                return (
+                                                    <li key={i} className="project__techlist">
+                                                        {tech.name}
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="project__device__type">
+                                    <div className="desktop__view">
+                                        <h3>Desktop view</h3>
+                                        <div className="desktop__view__img">
+                                            <Image
+                                                src={desktop_view}
+                                                alt={alt}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="mobile__view">
+                                        <h3>Mobile view</h3>
+                                        <div className="desktop__view__img">
+                                            <Image
+                                                src={mobile_view}
+                                                alt={alt}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        );
+                    })}
+            </div>
+        </section>
+    );
+}
+
+export default ProjectInfo;

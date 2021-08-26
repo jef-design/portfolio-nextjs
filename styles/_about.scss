@@ -1,0 +1,84 @@
+.about{
+
+    .about__wrapper{
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5rem;
+        row-gap: 2rem;
+        @media screen and (max-width: 853px){
+            grid-template-columns: repeat(1,1fr);
+        }
+        .about__info{
+            p{
+                text-align: justify;
+                text-justify: inter-word;
+            }
+        }
+        .about__skill{
+            .skill__container{
+                .skill__title{
+                    margin-bottom: 2rem;
+                }
+                .skill__wrapper{
+                    padding: 15px 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .skill{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-right: 20px;
+                        &:nth-child(1){
+                            color: #e34c26;
+                        }
+                        &:nth-child(2){
+                            color: #264de4;
+                        }
+                        &:nth-child(3){
+                            color: #cc6699;
+                        }
+                        &:nth-child(4){
+                            color: #f9dc1c;
+                        }
+
+                        i{
+                            font-size: 3rem;
+                            height: 48px;
+                            width: 48px;
+
+                        }
+                        p{
+                            color: var(--textParagraphHighlight);
+                        }
+                    }
+                    .skill2{
+                        &:nth-child(1){
+                            color: #61DBFB;
+                        }
+                        &:nth-child(2){
+                            color: #602C50;
+                        }
+                        &:nth-child(3){
+                            color: skyblue;
+                        }
+                        &:nth-child(6){
+                            color: #764abc;
+                        }
+                    }
+                    .skill3{
+                        &:nth-child(1){
+                            color: #28cbff;
+                        }
+                        &:nth-child(2){
+                            color: #F1502F;
+                        }
+                        &:nth-child(3){
+                            color: #211F1F;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

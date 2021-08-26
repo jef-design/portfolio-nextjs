@@ -1,0 +1,34 @@
+.footer{
+    .footer__bottom{
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-top: 2px solid #ddd;
+        font-size: var(--fontSmall);
+        color: var(--textSecondaryColor);
+        font-weight: 600;
+    }
+}
+
+.footer__contact{
+    margin-top: 7rem;
+a{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: .8rem;
+    color: #fff!important;
+    background: var(--primaryColor);
+    padding: 13px 25px;
+    border-radius: 17px;
+    transition: background-color .1s ease;
+    box-sizing: border-box;
+    transition: all .25s ease;
+    box-shadow: 0 10px 20px -10px var(--primaryColor);
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+}
