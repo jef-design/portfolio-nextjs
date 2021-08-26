@@ -4,6 +4,7 @@ import { data } from "../../api/data";
 import Head from "next/head";
 import Image from "next/image";
 import Meta from "../../../components/Meta/Meta";
+import Link from "next/link";
 
 function ProjectInfo() {
     const router = useRouter();
@@ -29,6 +30,8 @@ function ProjectInfo() {
                             desktop_view,
                             alt,
                             description,
+                            platform,
+                            category,
                             title,
                             tech_use,
                             site_link,
@@ -54,25 +57,37 @@ function ProjectInfo() {
                                     </div>
                                     <div className="project__description">
                                         <div className="project__btn">
-                                            <a
-                                                className="btn_sitelink"
+                                            <Link
+                                                
                                                 href={site_link}
+                                                passHref={true}
                                             >
-                                                View live site
-                                            </a>
-                                            <a
-                                                className="btn_githubrepo"
+                                                <div className="project__link">View live site <i className='bx bx-chevron-right'></i></div>
+                                            </Link>
+
+                                            <Link
+                                                
                                                 href={github_repo}
+                                                passHref={true}
                                             >
-                                                Github Repository
-                                            </a>
+                                                <div className="project__link">Github Repository <i className='bx bx-chevron-right'></i></div>
+                                            </Link>
                                         </div>
                                         <p>{description}</p>
-                                        <p>Tech used:</p>
+                                        <div>
+                                            <h4>Platform</h4>
+                                            <p>{platform}</p>
+                                            <h4>Category</h4>
+                                            <p>{category}</p>
+                                        </div>
+                                        <h4>Tech used:</h4>
                                         <ul className="project__techuse">
                                             {tech_use.map((tech, i) => {
                                                 return (
-                                                    <li key={i} className="project__techlist">
+                                                    <li
+                                                        key={i}
+                                                        className="project__techlist"
+                                                    >
                                                         {tech.name}
                                                     </li>
                                                 );

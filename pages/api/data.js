@@ -26,11 +26,14 @@ export const data = [
         alt: 'Google News',
         title: 'Google News',
         description: 'A clone of Google News Website is a news aggregator service developed by Google. It presents a continuous flow of links to articles organized from thousands of publishers. this clone has a google authentication using next-auth',
+        platform: 'Web / Mobile',
+        category: 'Entertainment',
         tech_use: [
             {name: 'Next.js'},
             {name: 'Next-Auth'},
             {name: 'Tailwind CSS'},
             {name: 'Redux'},
+            {name: 'Heroicons'},
             {name: 'API'}, 
         ],
         site_link: 'https://news-nextjs-app.vercel.app/',
@@ -43,6 +46,8 @@ export const data = [
         alt: 'Voodu',
         title: 'Voodu',
         description: 'A movie website that shows details and trailers of movies, tv shows and people using TMDB API Built with Reactjs and Redux',
+        platform: 'Web / Mobile',
+        category: 'Entertainment',
         tech_use: [
             // {name: 'HTML'},
             // {name: 'CSS'},
@@ -61,6 +66,8 @@ export const data = [
         alt: 'Country Info',
         title: 'CountryInfo',
         description: 'CountryInfo provides a  information about the world\'s nations consuming REST COUNTRIES API. These calls allow users to retrieve all available countries or to retrieve a given country or country code.Built with Reactjs',
+        platform: 'Web / Mobile',
+        category: 'Entertainment',
         tech_use: [
             {name: 'React.js'},
             {name: 'Styled-Components'},
@@ -77,6 +84,8 @@ export const data = [
         alt: 'Social Media Dashboard',
         title: 'Social Media Dashboard',
         description: 'A Social Media Dashboard challenge with theme switcher(light & dark) from front-end mentor',
+        platform: 'Web / Mobile',
+        category: 'Social Media',
         tech_use: [
             {name: 'HTML'},
             {name: 'CSS'},
@@ -93,6 +102,8 @@ export const data = [
         alt: 'Bookmark Landing Page',
         title: 'Bookmark Landing Page',
         description: 'A simple Bookmark Landing Page with tabbed features section and FAQ accordion.',
+        platform: 'Web / Mobile',
+        category: 'Landing Page',
         tech_use: [
             {name: 'HTML'},
             {name: 'CSS'},
@@ -111,6 +122,8 @@ export const data = [
         alt: 'Manage Landing Page',
         title: 'Manage Landing Page',
         description: 'A Manage landing page with fully responsive testimonial section from front-end mentor challenge.',
+        platform: 'Web / Mobile',
+        category: 'Landing Page',
         tech_use: [
             {name: 'HTML'},
             {name: 'CSS'},
