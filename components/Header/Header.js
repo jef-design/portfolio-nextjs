@@ -4,6 +4,10 @@ import Head from 'next/head'
 
 const Header = () => {
     const [isOpen,setIsOpen] = useState(false);
+
+    const Navigationfunc = () => {
+        setIsOpen(!isOpen)
+    }
     return (
         <React.Fragment>
             <Head>
@@ -11,16 +15,16 @@ const Header = () => {
             </Head>
             <header className="header container">
                 <div className="header__wrapper">
-                <i className='bx bx-menu' onClick={()=> setIsOpen(!isOpen)}></i>
+                <i className='bx bx-menu' onClick={Navigationfunc}></i>
                     <div className="header__title">
                         <Link href="/" passHref={true} ><h2>JEFF</h2></Link>
                     </div>
                     <ul className="nav__menu" style={{display: isOpen ? "flex" : ""}}>
-                        <li>
-                            <Link href="/project" onClick={()=> setIsOpen(!isOpen)}>Projects</Link>
+                        <li onClick={Navigationfunc}>
+                            <Link href="/project" >Projects</Link>
                         </li>
-                        <li>
-                            <Link href="/about" onClick={()=> setIsOpen(!isOpen)}>About & Skill</Link>
+                        <li onClick={Navigationfunc}>
+                            <Link href="/about" onClick={Navigationfunc}>About & Skill</Link>
                         </li>
                     </ul>
                 </div>
