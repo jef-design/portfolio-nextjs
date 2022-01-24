@@ -34,8 +34,6 @@ const Header = () => {
                 </div>
                 
             </header>
-            {/* <div className="blur" style={{display: isOpen ? "block" : ""}}>
-                </div> */}
         </React.Fragment>
     );
 };
